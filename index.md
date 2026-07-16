@@ -5,10 +5,9 @@
 
 ## Download
 
-### [Download PeakAnalyser for Windows]({{ site.github.repository_url }}/releases/latest/download/PeakAnalyser.exe)
+### [Download PeakAnalyser Beta Version for Windows]({{ site.github.repository_url }}/releases/latest/download/v0.1.0-beta.1/PeakAnalyser.exe)
 
-
-[View the latest release notes]({{ site.github.repository_url }}/releases/latest)
+[View the latest release notes]({{ site.github.repository_url }}/releases/tag/v0.1.0-beta.1)
 
 > The application is provided free of charge. The source code is not publicly distributed.
 
