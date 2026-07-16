@@ -1,6 +1,10 @@
-# Peak Analyser
+# PeakAnalyser
 
-A GUI application to visualize aggregated heating demand profiles and analyze the feasibility of peak load shifting.
+Public downloads and user documentation for PeakAnalyser.
+
+The application source code is maintained separately and is not included in this public repository.
+
+PeakAnalyser is a GUI application to visualize aggregated heating demand profiles and analyze the feasibility of peak load shifting.
 This tool allows users to visualize demand data (and scale it up), interactively adjust peak power limits, and calculate the feasibility of shifting excess energy demand to earlier time periods.
 
 
