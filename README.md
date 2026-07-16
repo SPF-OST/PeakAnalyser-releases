@@ -17,7 +17,7 @@ This tool allows users to visualize demand data (and scale it up), interactively
 
 The application expects a CSV file with at least two columns:
 
-* **Timestamp**: A date/time string (format: 2023-01-01 00:00).
+* **Timestamp**: A date/time string (format: YYYY-MM-DD HH:MM).
 * **Power**: A numeric value representing the heating demand (kW).
 
 The application has only been tested with hourly timestamp.
