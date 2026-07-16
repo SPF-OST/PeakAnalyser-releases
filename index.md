@@ -5,7 +5,7 @@
 
 ## Download
 
-### [Download PeakAnalyser Beta Version with Example Data]({{ site.github.repository_url }}/releases/latest/download/v0.1.0-beta.1/PeakAnalyser-v0.1.0-beta.1.zip)
+### [Download PeakAnalyser Beta Version with Example Data]({{ site.github.repository_url }}/releases/download/v0.1.0-beta.1/PeakAnalyser-v0.1.0-beta.1.zip)
 The download package contains:
 
 - `PeakAnalyser.exe`
