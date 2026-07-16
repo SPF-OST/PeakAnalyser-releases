@@ -9,7 +9,7 @@ This tool allows users to visualize demand data (and scale it up), interactively
 * **Automated Feasibility Check:** Instantly checks every day in the dataset to see if there is enough preceding capacity to cover the excess demand above the peak limit.
 * **Manual Shift Calculation:** Select specific regions using markers to calculate exact energy excess (kWh) and available buffer capacity.
 * **Data Scaling:** Apply scale factors to the dataset dynamically to simulate higher/lower demand scenarios.
-* **Standalone Executable:** Can be packaged into a single `.exe` file with a splash screen.
+* **Standalone Executable:** Packaged into a single `.exe` file with a splash screen.
 
 ## User Instructions
 
