@@ -5,11 +5,24 @@
 
 ## Download
 
-### [Download PeakAnalyser Beta Version for Windows]({{ site.github.repository_url }}/releases/latest/download/v0.1.0-beta.1/PeakAnalyser.exe)
+### [Download PeakAnalyser Beta Version with Example Data]({{ site.github.repository_url }}/releases/latest/download/v0.1.0-beta.1/PeakAnalyser-v0.1.0-beta.1.zip)
+The download package contains:
+
+- `PeakAnalyser.exe`
+- `PeakAnalyser-example.csv`
 
 [View the latest release notes]({{ site.github.repository_url }}/releases/tag/v0.1.0-beta.1)
 
 > The application is provided free of charge. The source code is not publicly distributed.
+
+### Running the application
+
+1. Extract the downloaded ZIP file.
+2. Open the extracted folder.
+3. Double-click `PeakAnalyser.exe`.
+4. Select **Load CSV File**.
+5. Choose `PeakAnalyser-example.csv` to test the application.
+
 
 <div style="text-align: center; margin: 1.5rem 0;">
   <img
