@@ -38,23 +38,24 @@ The download package contains:
   >
 </div>
 
-<div style="
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin: 1.5rem 0;
-">
+<div
+  id="screenshot-row"
+  style="
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    margin: 1.5rem 0;
+  "
+>
   <img
     id="screenshot-2"
     src="{{ '/assets/images/screenshot_2.png' | relative_url }}"
     alt="PeakAnalyser automated analysis"
     style="
       display: block;
-      max-width: 100%;
-      object-fit: contain;
-      object-position: left top;
+      width: auto;
+      height: auto;
     "
   >
 
@@ -65,8 +66,7 @@ The download package contains:
     style="
       display: block;
       width: auto;
-      max-width: 100%;
-      object-fit: contain;
+      height: auto;
     "
   >
 </div>
@@ -76,21 +76,44 @@ The download package contains:
     const screenshot1 = document.getElementById("screenshot-1");
     const screenshot2 = document.getElementById("screenshot-2");
     const screenshot3 = document.getElementById("screenshot-3");
+    const screenshotRow = document.getElementById("screenshot-row");
 
-    if (!screenshot1 || !screenshot2 || !screenshot3) {
+    if (!screenshot1 || !screenshot2 || !screenshot3 || !screenshotRow) {
       return;
     }
 
-    const width = screenshot1.clientWidth;
-    const height = screenshot1.clientHeight;
+    if (
+      !screenshot1.naturalWidth ||
+      !screenshot2.naturalWidth ||
+      !screenshot3.naturalWidth
+    ) {
+      return;
+    }
 
-    // Screenshot 2: same displayed width and height as screenshot 1.
-    screenshot2.style.width = `${width}px`;
-    screenshot2.style.height = `${height}px`;
+    const gap = 16;
+    const totalWidth = screenshot1.clientWidth;
+    const availableImageWidth = Math.max(totalWidth - gap, 0);
 
-    // Screenshot 3: same height as screenshot 2.
-    screenshot3.style.height = `${height}px`;
-    screenshot3.style.width = "auto";
+    /*
+     * Preserve the natural width ratio between screenshots 2 and 3.
+     * Their combined displayed width, including the gap, will equal
+     * the displayed width of screenshot 1.
+     */
+    const combinedNaturalWidth =
+      screenshot2.naturalWidth + screenshot3.naturalWidth;
+
+    const scaleFactor = availableImageWidth / combinedNaturalWidth;
+
+    screenshot2.style.width =
+      `${screenshot2.naturalWidth * scaleFactor}px`;
+
+    screenshot3.style.width =
+      `${screenshot3.naturalWidth * scaleFactor}px`;
+
+    screenshot2.style.height = "auto";
+    screenshot3.style.height = "auto";
+
+    screenshotRow.style.width = `${totalWidth}px`;
   }
 
   window.addEventListener("load", resizeScreenshots);
