@@ -24,34 +24,78 @@ The download package contains:
 5. Choose `PeakAnalyser-example.csv` to test the application.
 
 
-<div style="text-align: center; margin: 1.5rem 0;">
+<div style="margin: 1.5rem 0; text-align: left;">
   <img
+    id="screenshot-1"
     src="{{ '/assets/images/screenshot_1.png' | relative_url }}"
     alt="PeakAnalyser main window"
-    style="height: 350px; width: auto; max-width: 100%; object-fit: contain;"
+    style="
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    "
   >
 </div>
 
 <div style="
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 16px;
   flex-wrap: wrap;
   margin: 1.5rem 0;
 ">
   <img
+    id="screenshot-2"
     src="{{ '/assets/images/screenshot_2.png' | relative_url }}"
     alt="PeakAnalyser automated analysis"
-    style="height: 350px; width: auto; max-width: 100%; object-fit: contain;"
+    style="
+      display: block;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: left top;
+    "
   >
 
   <img
+    id="screenshot-3"
     src="{{ '/assets/images/screenshot_3.png' | relative_url }}"
     alt="PeakAnalyser manual analysis"
-    style="height: 350px; width: auto; max-width: 100%; object-fit: contain;"
+    style="
+      display: block;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+    "
   >
 </div>
+
+<script>
+  function resizeScreenshots() {
+    const screenshot1 = document.getElementById("screenshot-1");
+    const screenshot2 = document.getElementById("screenshot-2");
+    const screenshot3 = document.getElementById("screenshot-3");
+
+    if (!screenshot1 || !screenshot2 || !screenshot3) {
+      return;
+    }
+
+    const width = screenshot1.clientWidth;
+    const height = screenshot1.clientHeight;
+
+    // Screenshot 2: same displayed width and height as screenshot 1.
+    screenshot2.style.width = `${width}px`;
+    screenshot2.style.height = `${height}px`;
+
+    // Screenshot 3: same height as screenshot 2.
+    screenshot3.style.height = `${height}px`;
+    screenshot3.style.width = "auto";
+  }
+
+  window.addEventListener("load", resizeScreenshots);
+  window.addEventListener("resize", resizeScreenshots);
+</script>
 
 ---
 
